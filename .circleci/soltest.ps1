@@ -1,8 +1,6 @@
 $ErrorActionPreference = "Stop"
-
 cd "$PSScriptRoot\.."
-
-.\build\solc\Release\solc.exe --version
+\build\solc\Release\solc.exe --version
 if ( -not $? ) { throw "Cannot execute solc --version." }
 
 mkdir test_results
